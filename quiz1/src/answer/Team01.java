@@ -16,6 +16,7 @@ public class Team01 {
 		Benz benz = new Benz(200, "A-Class");
 		AMG amg = new AMG(300, "G-Class 63 AMG", engineer1);
 		//---------------문제 1---------------
+		//다음을 한 줄로 줄여주세요
 		Car car = new AMG(522, "AMG_GT", engineer1);
 		//------------------------------------
 
@@ -31,7 +32,6 @@ public class Team01 {
 
 		//---------------문제 3---------------
 		//car를 컴파일에러 없이 benzList에 추가하고, 모델명을 출력해주세요
-		//다운캐스팅
 		ArrayList<Benz> benzList = new ArrayList<>();
 
 		benzList.add(benz);
@@ -44,7 +44,7 @@ public class Team01 {
 
 		//---------------문제 4---------------
 		//논리적 예외 1 -> 예외가 발생하는 경우를 말해주세요
-		//정답 : ArrayList 인덱스 범위를 벗어난 경우, 숫자를 입력하지 않았을 경우
+		//정답 : ArrayList 인덱스 범위를 벗어난 경우, 숫자가 아닌 값을 입력한 경우
 		System.out.print("몇 번째 차를 조회할까요? : ");
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 
@@ -67,7 +67,7 @@ public class Team01 {
 
 		//---------------문제 5---------------
 		//논리적 예외 2 -> 예외가 발생하는 경우를 말해주세요
-		//정답 : 음수를 입력한 경우, 숫자를 입력하지 않았을 경우
+		//정답 : 음수를 입력한 경우, 숫자가 아닌 값을 입력한 경우
 		boolean flag2 = true;
 		do {
 			try {
