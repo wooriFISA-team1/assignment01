@@ -51,7 +51,7 @@ public class Team01 {
     
     
     
-		//----------문제 4----------
+		//---------------문제 4---------------
 		//논리적 예외 1 -> 예외가 발생하는 경우를 말해주세요
 		System.out.print("몇 번째 차를 조회할까요? : ");
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
@@ -63,14 +63,17 @@ public class Team01 {
 				Benz myBenz = benzList.get(n);
 				System.out.println("모델명 : " + myBenz.model + "\n");
 				flag1 = false;
-			}catch (Exception e) {
-				System.out.print("해당 차가 존재하지 않습니다.\n다시 입력하세요 : ");
+			}catch(NumberFormatException e){
+				System.out.print("숫자를 입력하세요 : ");
+			}catch (IndexOutOfBoundsException e) {
+				System.out.print("해당 차가 존재하지 않습니다. 다시 입력하세요 : ");
 			}
 		}while(flag1);
+		//------------------------------------
 
 
 
-		//----------문제 5----------
+		//---------------문제 5---------------
 		//논리적 예외 2 -> 예외가 발생하는 경우를 말해주세요
 		boolean flag2 = true;
 		do {
@@ -80,10 +83,13 @@ public class Team01 {
 				Benz yourBenz = new Benz(inputHP, "님이 산 차");
 				System.out.println(yourBenz.model + "의 마력은 " + yourBenz.HP + " 입니다.");
 				flag2 = false;
-			}catch(RuntimeException e) {
-				System.out.println("님이 산 차의 " + e.getMessage() + "\n다시 입력하세요.");
+			}catch(NumberFormatException e){
+				System.out.print("숫자를 입력하세요 : ");
+			}catch(Exception e) {
+				System.out.print("님이 산 차의 " + e.getMessage() + "\n다시 입력하세요 : ");
 			}
 		}while(flag2);
+		//------------------------------------
 
 	}
 
